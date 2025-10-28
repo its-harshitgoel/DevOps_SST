@@ -1,0 +1,45 @@
+Microservices architecture is when a monolithic application is decomposed into a 
+collection of smaller, independent services that work together to form the complete system.
+
+
+A load balancer can perform path-based routing, directing requests to the correct microservice based on the URL path.
+Within each microservice, it then selects one instance from many (e.g., out of 100 instances) to handle the request, 
+ensuring balanced traffic distribution when there are thousands of incoming requests.
+
+Authentication - Are you a valid user? 
+Authorization - What are you allowed to do?
+
+Two Axis of Scalability 
+
+DNS 
+Browser
+LB 
+Authentication and Authorization
+Redis
+
+Service Discovery + Traffic Distribution - all load balancer needs to have these two capability
+When a new instance comes up all the other instances goes down
+
+Types Of Microservices Microservices Communication:
+
+    - Synchronous : immediate consistency
+        Need a load balacer
+
+    - Asynchronous : eventual consistency (Kafka, RabbitMQ)
+        - pub sub
+        - queue
+            You don’t need a load balancer in asynchronous microservice communication because 
+            the message broker or event streaming system automatically distributes load among consumers.
+
+Other way Of Communication is API by clients
+API Gateway
+Reporting
+Event Syncing : tracking the time, instance of call - Performance Issues
+Logs : stats of what happened in high level - Bugs, defects, Customer Issues
+       Externalise Logs : imposable to track
+
+
+12 factor app
+
+Microservices are designed to be stateless
+Each MS has independent MS
