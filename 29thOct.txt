@@ -35,4 +35,5 @@ AWS SLAs
 practices, philosophies, tools to deliver software faste more reliably -> devops definition
 
 Shift left approach => catch bug faster
-security and Performance testing in the end
+Security and Performance testing in the end
+
